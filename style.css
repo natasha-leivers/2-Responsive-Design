@@ -1,3 +1,106 @@
+button {
+    display: none;
+    /* Hide the button by default */
+}
+
+.nav {
+    width: 100%;
+    background-color: #333;
+    /* Background color */
+    transition: left 0.3s;
+    /* Smooth transition */
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    /* Remove bullets */
+    padding: 0;
+    /* Remove padding */
+}
+
+.nav li {
+    padding: 15px;
+    /* Padding for list items */
+}
+
+.nav a {
+    color: white;
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+@media (max-width: 768px) {
+    #menuButton {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 0;
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button {
+        display: block;
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .nav {
+        width: 250px;
+        /* Width of the side menu */
+        height: 100%;
+        /* Full height */
+        position: fixed;
+        /* Fixed position */
+        left: -250px;
+        /* Hide off-screen */
+        top: 0;
+        background-color: #333;
+        /* Background color */
+        transition: left 0.3s;
+        /* Smooth transition */
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        list-style-type: none;
+        /* Remove bullets */
+        padding: 0;
+        /* Remove padding */
+    }
+
+    .nav li {
+        padding: 15px;
+        /* Padding for list items */
+    }
+
+    .nav a {
+        color: white;
+        /* Text color */
+        text-decoration: none;
+        /* Remove underline */
+    }
+
+    .nav.show {
+        left: 0;
+        /* Show menu */
+    }
+}
+
 /* General Styles */
 
 header {
@@ -17,6 +120,35 @@ section {
     justify-items: center;
 }
 
+.welcome-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home-image {
+    width: auto;
+    height: 300px;
+    display: block;
+    margin: 2rem;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .welcome-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 2rem;
+        border-radius: 5px;
+    }
+}
+
 .content {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -26,7 +158,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 0;
+    padding: 0;
     gap: 1rem;
 }
 
@@ -34,6 +167,7 @@ section {
     list-style: none;
     background-color: #f4f4f4;
     border-radius: 5px;
+    margin: 0;
     padding: 1rem;
     text-align: center;
     justify-items: center;

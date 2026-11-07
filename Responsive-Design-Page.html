@@ -18,10 +18,44 @@
     </header>
 
     <main>
-        <section class="content">
-            <h2>Welcome to Our Responsive Design Page</h2>
-            <p>This page adjusts its layout based on the screen size of the device you are using. Resize your browser window to see the changes!</p>
-        </section>
+        <button id="menuButton"><i class="fa-solid fa-bars"></i></button>
+        <nav id="Nav"
+             class="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            document.getElementById('menuButton').addEventListener('click', function () {
+                var nav = document.getElementById('Nav');
+                nav.classList.toggle('show'); // Toggle the 'show' class
+            });
+
+            // Hide the menu when clicking outside of it
+            document.addEventListener('click', function (event) {
+                var nav = document.getElementById('Nav');
+                var button = document.getElementById('menuButton');
+
+                // Check if the click was outside the nav and the button
+                if (!nav.contains(event.target) && !button.contains(event.target)) {
+                    nav.classList.remove('show'); // Hide the menu
+                }
+            });
+        </script>
+        <div class="welcome-section">
+            <img src="images/homeimage.png"
+                 alt="Home Image"
+                 class="home-image">
+
+            <section class="content">
+                <h2>Welcome to Our Responsive Design Page</h2>
+                <p>This page adjusts its layout based on the screen size of the device you are using. Resize your browser window to see the changes!</p>
+            </section>
+        </div>
 
         <section class="features">
             <h2>Features</h2>
