@@ -140,6 +140,7 @@ section {
     margin: 0;
     padding: 0;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .features li {
@@ -154,10 +155,6 @@ section {
 @media (max-width: 480px) {
     .features ul {
         flex-direction: column;
-    }
-
-    .features li {
-        width: 100%;
     }
 }
 
