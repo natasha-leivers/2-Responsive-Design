@@ -1,3 +1,22 @@
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        padding-top: 0;
+        padding: 2rem;
+    }
+}
+
 button {
     display: none;
 }
@@ -14,6 +33,7 @@ button {
     justify-content: space-around;
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .nav li {
@@ -27,26 +47,17 @@ button {
 
 @media (max-width: 768px) {
     #menuButton {
-        position: fixed;
-        top: 10px;
+        font-size: 16px;
+        top: 45px;
         left: 10px;
         z-index: 0;
-        background-color: #333;
+        padding: 10px;
         color: white;
+        background-color: #333;
         border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-    button {
         display: block;
-        background-color: #333;
-        color: white;
-        border: none;
-        padding: 10px 20px;
+        position: absolute;
         cursor: pointer;
-        font-size: 16px;
     }
 
     .nav {
@@ -79,16 +90,6 @@ button {
     .nav.show {
         left: 0;
     }
-}
-
-/* General Styles */
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-family: Arial, sans-serif;
 }
 
 section {
@@ -186,19 +187,6 @@ section {
     }
 }
 
-.testimony {
-    display: flex;
-    align-items: center;
-    gap: 0;
-}
-
-@media (max-width: 480px) {
-    .testimony {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 .contact form {
     justify-content: center;
     display: flex;
@@ -207,4 +195,26 @@ section {
     width: 80%;
     max-width: 500px;
     margin: 2rem;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 2rem;
+    align-items: center;
+}
+
+.testimony {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 1rem;
+    max-width: 70%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .testimonials {
+        flex-direction: column;
+    }
 }
